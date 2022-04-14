@@ -1,0 +1,71 @@
+#newTweetForm {
+    visibility: hidden;
+}
+#image_tweet {
+    width: 200px;
+}
+.modify_tweet {
+    visibility: hidden;
+}
+
+#dash {
+    height: 15px;
+}
+
+.Tweet {
+    width: 500px;
+    height: 300px;
+    border: 1px solid;
+}
+
+#data {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 1rem;
+    width: 80%;
+    border: 1px solid;
+}
+#depose {
+    height:80px;
+    font-size:20px;
+    line-height: 80px;
+    color:#999;
+    text-align: center;
+    padding:10px;
+    margin:10px;
+    border:2px dashed #999;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#depose.onDropZone {
+    background-color: rgb(231, 231, 231);
+    color:#000;
+    border:1.8px solid #000;
+    padding: 7px
+}
+#fileToUpload {
+    display: none;
+}
+.bloc {
+    max-height: 90px;
+    max-width: 90px;
+    padding:5px;
+    border:1px solid #000;
+    margin:10px;
+}
+#preview {
+    display:none;
+}
+.fichier {
+    padding:5px;
+    background: white;    
+    margin-top:1px;
+}
+.fichier img {
+    max-height: 80px;
+    max-width: 80px;
+    margin-right:10px;
+    vertical-align: middle;
+}
