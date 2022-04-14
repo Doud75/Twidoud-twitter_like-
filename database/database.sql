@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `tweet` (
         `pseudo` VARCHAR(255),
         `data` TEXT,
         `date` DATETIME DEFAULT CURRENT_TIMESTAMP,
+        `image` VARCHAR(255),
         `user_id` INT NOT NULL,
         PRIMARY KEY (`tweet_id`),
         FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
