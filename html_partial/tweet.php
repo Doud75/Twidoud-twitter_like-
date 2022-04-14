@@ -1,3 +1,4 @@
+
 <div id="nav">
     <form method="post" action="/deconnection">
         <button class="nav_deco" id="deconnection" type="submit">
@@ -33,14 +34,12 @@
             <?php if($tweet["user_id"] === $_SESSION["user"]["user_id"]) { ?>
 
                 <form id="delete_tweet" method="post" action="/delete">
-                    <button class="delete" type="submit"><img id="dash"src="img/bin.png" alt="BIN" ></button>
+                    <button class="delete" type="submit"><img id="dash"src="img/Frame 13.png" alt="BIN" ></button>
                     <input type="hidden" name="delete_id" value="<?= $tweet["tweet_id"] ?>">
                     <input type="hidden" name="user_id" value="<?= $tweet["user_id"] ?>">
                 </form>
 
-                <button class="modifyTweetBtn" id="btn_modify" type="button">
-                    Modifier
-                </button>
+                <button class="modifyTweetBtn" id="btn_modify" type="button"><img id="pen"src="img/Frame 12.png" alt="BIN" ></button>
 
                 <form id="form_modify" class="modify_tweet" method="post" action="/modify">
                     <button class="modify" type="submit">Valider</button>

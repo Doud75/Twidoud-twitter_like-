@@ -7,7 +7,12 @@
     <link rel="stylesheet" type="text/css" href="style/style.css?<?php echo time();?>">
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <img src="img/Union.png" alt="">
+            <h1>Twettic</h1>
+        </nav>
+    </header>
     
     <?= $content ?>
 
