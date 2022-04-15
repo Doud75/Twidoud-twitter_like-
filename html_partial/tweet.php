@@ -39,8 +39,7 @@
                     <input type="hidden" name="user_id" value="<?= $tweet["user_id"] ?>">
                 </form>
 
-                <button class="modifyTweetBtn" id="btn_modify" type="button"><img id="pen"src="img/Frame 12.png" alt="BIN" ></button>
-
+                <img id="pen" class="modifyTweetBtn" src="img/Frame 12.png" alt="BIN" >
                 <form id="form_modify" class="modify_tweet" method="post" action="/modify">
                     <button class="modify" type="submit">Valider</button>
                     <input id="modify_input" type="text" name="modify_tweet" value="<?= $tweet["data"] ?>">

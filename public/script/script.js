@@ -9,7 +9,7 @@ var nav = document.querySelector("#nav");
 nav.appendChild(deconnection);
 
 
-let modify_tweet_btn = document.querySelectorAll("#btn_modify");
+let modify_tweet_btn = document.querySelectorAll("#pen");
 modify_tweet_btn.forEach(button => {
   let isVisible = false
 
@@ -17,7 +17,6 @@ modify_tweet_btn.forEach(button => {
     const target = e.target
     const toDisplay = target.nextElementSibling
     isVisible = !isVisible
-    target.innerHTML = isVisible ?  "annuler" : "modifier";
     toDisplay.style.visibility = isVisible ? "visible" : "hidden";
   })
 })

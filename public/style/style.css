@@ -27,13 +27,13 @@
     border: 1px solid #00FF87;
     border-radius: 20px;
     display: grid;
-    grid-template-rows: 27px 1fr 200px 30px;
-    grid-template-columns: 80px 1fr 1fr;
-    gap: 5px
+    grid-template-rows: 18px 1fr 200px 30px;
+    grid-template-columns: 80px 50px 1fr;
+    gap: 10px
 }
 #image_tweet {
     grid-row: 3;
-    grid-column: 2;
+    grid-column: 2 / 4;
     height: 200px;
     left: 141px;
     top: 149px;
@@ -42,18 +42,26 @@
     grid-row: 4;
     grid-column: 2;
 }
-#btn_modify {
+.modifyTweetBtn {
     grid-row: 4;
+    grid-column: 3;
+}
+#name {
+    grid-row: 1;
     grid-column: 2;
+    align-self: center;
+}
+#date {
+    grid-row: 1;
+    grid-column: 3;
+    align-self: center;
+    justify-self: end;
 }
 
 #data {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    height: 1rem;
-    width: 80%;
-    /* border: 1px solid #cacaca; */
+    align-self: center;
+    grid-row: 2;
+    grid-column: 2 / 4;
 }
 #depose {
     height:80px;
@@ -107,7 +115,7 @@ button {
     border-radius: 6px;
 }
 
-.delete, .modifyTweetBtn {
+.delete, #btn_modify {
     background-color: #fff;
     border:0px;
     border-radius: 5px;
