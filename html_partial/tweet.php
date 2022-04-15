@@ -1,6 +1,6 @@
 
 <div id="nav">
-    <form method="post" action="/deconnection">
+    <form id="deco_form" method="post" action="/deconnection">
         <button class="nav_deco" id="deconnection" type="submit">
             <span>Déconnection</span>
         </button>

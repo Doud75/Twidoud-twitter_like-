@@ -3,6 +3,10 @@ var new_tweet_btn = document.querySelector(".newTweetBtn");
 var new_tweet_input = document.querySelector("#tweet_input");
 var new_image_input = document.querySelector("#fileToUpload");
 var depose = document.querySelector("#depose");
+var deconnection = document.querySelector("#deco_form");
+var nav = document.querySelector("#nav");
+
+nav.appendChild(deconnection);
 
 
 let modify_tweet_btn = document.querySelectorAll("#btn_modify");

@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="img/Union.png" alt="">
-            <h1>Twettic</h1>
+        <nav id="nav">
+            <img id="logo" src="img/Union.png" >
+            <h1 id="site_name" >Twettic</h1>
         </nav>
     </header>
     
