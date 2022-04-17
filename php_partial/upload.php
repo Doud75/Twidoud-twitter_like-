@@ -61,13 +61,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             $maRequete = $pdo->prepare(
-                "INSERT INTO `tweet` (`pseudo`, `user_id`, `data`, `image`)
-                VALUES(:pseudo, :userId, :oneData, :image)");
+                "INSERT INTO `tweet` (`pseudo`, `user_id`, `data`, `image`, `profil_picture`)
+                VALUES(:pseudo, :userId, :oneData, :image, :profil_picture)");
                 $maRequete->execute([
                     ":pseudo" => $pseudo,
                     ":userId" => $user_id,
                     ":oneData" => $texte,
-                    ":image" => $full_name
+                    ":image" => $full_name,
+                    ":profil_picture" => $profil_picture
                 ]);
             header("Location: /tweet");
             exit();

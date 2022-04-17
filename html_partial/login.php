@@ -1,8 +1,9 @@
 <body class="bodyLogin">  
-    <main class="loginMenu"> 
-        <button class= "signIn" id="">
+    <main class="loginMenu">
+        <button class="signUp" id="">
             <a id="inscrire" href="/sign_up">Sign up</a>
         </button>
+        </nav>
         <div class="block1">
             <div class="formInput">
                 <form class="form" action="/login" method="post">
@@ -16,3 +17,5 @@
         </div>
     </main>
 </body>
+
+<script src="script/login_script.js?<?php echo time(); ?>"></script>

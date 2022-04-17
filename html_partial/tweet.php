@@ -57,3 +57,6 @@
     <?php endforeach; ?>
 </section>
 <script src="script/tweet_script.js?<?php echo time(); ?>"></script>
+<script>
+    console.log("<?=$_SESSION["user"]["profil_picture"]?>")
+</script>

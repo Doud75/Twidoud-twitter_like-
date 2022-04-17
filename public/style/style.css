@@ -241,6 +241,20 @@ nav {
     padding: 0px;
     top: calc(50% - 47px/2 - 1px);
 }
+.signUp {
+    position: absolute;
+    right: 90px;
+    top: calc(50% - 35px/2 - 1px);
+}
+.login {
+    position: absolute;
+    right: 90px;
+    top: calc(50% - 35px/2 - 1px);
+}
+#inscrire {
+    text-decoration: none;
+    color: #000;
+}
 #profil_img {
     background-color: #00FF87;
     border:0px;

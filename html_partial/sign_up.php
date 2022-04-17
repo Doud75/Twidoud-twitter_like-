@@ -1,10 +1,9 @@
 <body class="bodyLogin">
     <main class="loginMenu">
-        <button class= "signIn" id="">
+        <button class= "login" id="">
             <a id="inscrire" href="/login">Login</a>
         </button>
         <div class="block1">
-            <h1 class="welcome">Sign up to <p id="something">Twidoud</p></h1>
             <div class="formInput">
                 <form method="POST">
                     <label for="pseudo">Entrez votre pseudo</label>
@@ -19,3 +18,5 @@
         </div>
     </main>
 </body>
+
+<script src="script/signUp_script.js?<?php echo time(); ?>"></script>
