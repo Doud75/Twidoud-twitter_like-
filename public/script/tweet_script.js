@@ -4,9 +4,11 @@ var new_tweet_input = document.querySelector("#tweet_input");
 var new_image_input = document.querySelector("#fileToUpload");
 var depose = document.querySelector("#depose");
 var deconnection = document.querySelector("#deco_form");
+var profilBtn = document.querySelector("#profil_btn");
 var nav = document.querySelector("#nav");
 
 nav.appendChild(deconnection);
+nav.appendChild(profilBtn);
 
 
 let modify_tweet_btn = document.querySelectorAll("#pen");

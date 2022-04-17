@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav id="nav">
-            <img id="logo" src="img/Union.png" >
+            <a href="/tweet"><img id="logo" src="img/Union.png" ></a>
             <h1 id="site_name" >Twettic</h1>
         </nav>
     </header>

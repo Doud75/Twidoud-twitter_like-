@@ -48,6 +48,15 @@ switch ($uri) {
     case "/upload":
         require_once __DIR__ . "/php_partial/upload.php";
         break;
+    case "/profil":
+        require_once __DIR__ . "/php_partial/profil.php";
+        break;
+    case "/change_profil":
+        require_once __DIR__ . "/php_partial/change_profil.php";
+        break;
+    case "/change_pseudo":
+        require_once __DIR__ . "/php_partial/change_pseudo.php";
+        break;
     default:
         http_response_code(404);
         $content = file_get_contents(__DIR__ . "/html_partial/alert/404.php");

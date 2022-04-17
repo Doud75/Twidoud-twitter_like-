@@ -1,6 +1,3 @@
-#newTweetForm {
-    visibility: hidden;
-}
 #image_tweet {
     max-height: 200px;
     border:1px solid #cacaca;
@@ -11,13 +8,37 @@
 }
 
 #section_Tweet{
-    margin-top: 224px;
+    margin-top: 220px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 }
-
+#newTweetForm {
+    visibility: hidden;
+    position: fixed;
+}
+#open_tweet_window {
+    position: fixed;
+    width: 159px;
+    height: 38px;
+    left: 90px;
+    top: 224px;
+}
 .Tweet {
+    margin: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 25px;
+    width: 620px;
+    grid-column: 2;
+    border: 1px solid #00FF87;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 18px 1fr 30px;
+    grid-template-columns: 80px 50px 1fr;
+    gap: 10px
+}
+.with_image {
     margin: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -38,15 +59,24 @@
     left: 141px;
     top: 149px;
 }
-#delete_tweet {
+.with_image #delete_tweet {
     grid-row: 4;
     grid-column: 2;
 }
-.modifyTweetBtn {
+.with_image .modifyTweetBtn {
     grid-row: 4;
     grid-column: 3;
 }
+.Tweet #delete_tweet {
+    grid-row: 3;
+    grid-column: 2;
+}
+.Tweet .modifyTweetBtn {
+    grid-row: 3;
+    grid-column: 3;
+}
 #name {
+    font-weight: bold;
     grid-row: 1;
     grid-column: 2;
     align-self: center;
@@ -170,17 +200,48 @@ nav {
 }
 #deconnection {
     position: absolute;
-    width: 140px;
-    height: 38px;
-    right: 90px;
-    top: calc(50% - 38px/2 - 1px);
-    /* margin-right: 90px; */
+    right: 180px;
+    background-color: #00FF87;
+    border:0px;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    top: calc(50% - 47px/2 - 1px);
 }
-
-#open_tweet_window {
-    position: fixed;
-    width: 159px;
-    height: 38px;
-    left: 90px;
-    top: 224px;
+#logout_img {
+    background-color: #00FF87;
+    border:0px;
+    border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+#profil_btn {
+    position: absolute;
+    right: 90px;
+    background-color: #00FF87;
+    border:0px;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    top: calc(50% - 47px/2 - 1px);
+}
+#profil_img {
+    background-color: #00FF87;
+    border:0px;
+    border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+    margin-top: 2px;
+}
+#change_profil {
+    visibility: hidden;
+}
+#change_pseudo_form {
+    visibility: hidden;
 }

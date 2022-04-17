@@ -1,11 +1,10 @@
 
 <div id="nav">
     <form id="deco_form" method="post" action="/deconnection">
-        <button class="nav_deco" id="deconnection" type="submit">
-            <span>Déconnection</span>
-        </button>
+        <button class="nav_deco" id="deconnection" type="submit"><img id="logout_img" src="img/logout.png" alt=""></button>
         <input type="hidden" name="deco">
     </form>
+    <button id="profil_btn"><a href="/profil"><img id="profil_img" src="img/profile.png" alt=""></a></button>
 </div>
 <section id="section_Tweet">
     <div class="newTweet">
@@ -22,8 +21,13 @@
         </form>
     </div>
 
-    <?php foreach($tweets as $tweet): ?>
-        <div class="Tweet">
+    <?php foreach($tweets as $tweet): 
+        if($tweet["image"]) {
+            $tweet_class = "with_image";
+        } else {
+            $tweet_class = "Tweet";
+        }?>
+        <div class="<?= $tweet_class?>" >
             <span id="name" ><?= $tweet["pseudo"]?></span>
             <span id="date" ><?=$tweet["date"] ?></span>
             <div id="data" ><?=$tweet["data"] ?></div>
@@ -51,4 +55,4 @@
         </div>
     <?php endforeach; ?>
 </section>
-<script src="script/script.js?<?php echo time(); ?>"></script>
+<script src="script/tweet_script.js?<?php echo time(); ?>"></script>

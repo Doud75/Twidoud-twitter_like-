@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS `user` (
         `mail` VARCHAR(255) NOT NULL,
         `mdp` VARCHAR(256) NOT NULL,
         `pseudo` VARCHAR(255),
+        `profil_picture` VARCHAR(255),
         PRIMARY KEY (`user_id`)
     ) ENGINE=InnoDB;
 
