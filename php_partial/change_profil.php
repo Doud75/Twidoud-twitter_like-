@@ -63,10 +63,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
             require "../database/pdo.php";
             $user_id = $_SESSION["user"]["user_id"];
             $maRequete = $pdo->prepare(
-                // "UPDATE `tweet`
-                // SET `data`= :oneData
-                // WHERE `tweet_id` = :tweet_id"
                 "UPDATE `user` 
+                SET `profil_picture` = :profil_picture
+                WHERE `user_id` = :user_id");
+                $maRequete->execute([
+                    ":profil_picture" => $full_name,
+                    ":user_id" => $user_id
+                ]);
+            $maRequete = $pdo->prepare(
+                "UPDATE `tweet` 
                 SET `profil_picture` = :profil_picture
                 WHERE `user_id` = :user_id");
                 $maRequete->execute([

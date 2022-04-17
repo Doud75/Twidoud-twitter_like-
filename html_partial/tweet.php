@@ -28,6 +28,7 @@
             $tweet_class = "Tweet";
         }?>
         <div class="<?= $tweet_class?>" >
+            <img id="profil_picture_tweet" src="img_profil/<?=$tweet["profil_picture"]?>" alt="">
             <span id="name" ><?= $tweet["pseudo"]?></span>
             <span id="date" ><?=$tweet["date"] ?></span>
             <div id="data" ><?=$tweet["data"] ?></div>

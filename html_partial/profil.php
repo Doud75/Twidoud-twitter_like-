@@ -7,7 +7,9 @@
 </div>
 
 <div id="profil_picture">
-    <img src="img_profil/<?= $profil_picture?>" alt="">
+    <!-- <div id="span_modify_picture"> -->
+        <img id="img_modify_picture" src="img_profil/<?= $profil_picture?>" alt="">
+    <!-- </div> -->
     <button id="open_change_profil">Modifier photo</button>
     <form action="/change_profil" id="change_profil" method="post" enctype="multipart/form-data">
         <input type="file" name="pictureToUpload" id="pictureToUpload" accept="image/jpeg, image/png, image/gif, image/jpg">

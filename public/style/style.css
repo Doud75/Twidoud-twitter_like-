@@ -52,6 +52,17 @@
     grid-template-columns: 80px 50px 1fr;
     gap: 10px
 }
+
+#profil_picture_tweet {
+    grid-row: 1;
+    grid-column: 1;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #00FF87;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
 #image_tweet {
     grid-row: 3;
     grid-column: 2 / 4;
@@ -244,4 +255,21 @@ nav {
 }
 #change_pseudo_form {
     visibility: hidden;
+}
+/* #span_modify_picture {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    margin-top: 180px;
+} */
+#img_modify_picture {
+    border: 1px solid #00FF87;
+    border-radius: 50%;
+    object-fit: cover;
+    height:100px;
+    width: 100px;
+    margin-top: 180px;
+    /* position: absolute; */
+
 }

@@ -7,6 +7,9 @@ $user_id = $_SESSION["user"]["user_id"];
 $maRequete = $pdo->prepare("SELECT * FROM `tweet` ORDER BY `date` DESC");
 $maRequete->execute();
 $tweets = $maRequete->fetchAll(PDO::FETCH_ASSOC);
+// if(!$tweets["profil_picture"]) {
+//     $tweets["profil_picture"] = "profile-default.jpeg";
+// }
 
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
