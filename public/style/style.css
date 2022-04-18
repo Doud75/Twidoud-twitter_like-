@@ -104,6 +104,18 @@
     grid-row: 2;
     grid-column: 2 / 4;
 }
+#newTweetForm, #form_modify {
+    background-color: #FFF;
+    padding: 30px;
+    position: fixed;
+    width: 620px;
+    height: 350px;
+    left: calc(50% - 625px/2);
+    top: 200px;
+    border: 2px solid #00FF87;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
 #depose {
     height:80px;
     font-size:20px;
@@ -125,13 +137,7 @@
 #fileToUpload {
     display: none;
 }
-.bloc {
-    max-height: 90px;
-    max-width: 90px;
-    padding:5px;
-    border:1px solid #cacaca;
-    margin:10px;
-}
+
 #preview {
     display:none;
 }
@@ -145,6 +151,13 @@
     max-width: 80px;
     margin-right:10px;
     vertical-align: middle;
+}
+.bloc {
+    max-height: 90px;
+    max-width: 90px;
+    padding:5px;
+    border:1px solid #cacaca;
+    margin:10px;
 }
 
 button {
@@ -163,6 +176,9 @@ button {
     height: 30px;
     width: 30px;
     padding: 0px;
+}
+.delete {
+    border-radius: 30px;
 }
 nav {
     position: fixed;
@@ -270,13 +286,7 @@ nav {
 #change_pseudo_form {
     visibility: hidden;
 }
-/* #span_modify_picture {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    overflow: hidden;
-    margin-top: 180px;
-} */
+
 #img_modify_picture {
     border: 1px solid #00FF87;
     border-radius: 50%;

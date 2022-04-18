@@ -1,3 +1,4 @@
+var body = document.querySelector("body");
 var new_tweet_form = document.querySelector("#newTweetForm");
 var new_tweet_btn = document.querySelector(".newTweetBtn");
 var new_tweet_input = document.querySelector("#tweet_input");
@@ -20,6 +21,7 @@ modify_tweet_btn.forEach(button => {
     const toDisplay = target.nextElementSibling
     isVisible = !isVisible
     toDisplay.style.visibility = isVisible ? "visible" : "hidden";
+    body.style.backgroundColor = isVisible ? "#707070" : "";
   })
 })
 
@@ -28,6 +30,7 @@ function open_tweet_input() {
   isVisibleNewTweet = !isVisibleNewTweet
   new_tweet_btn.innerHTML = isVisibleNewTweet ? "annuler" : "Nouveau Tweet";
   new_tweet_form.style.visibility = isVisibleNewTweet ? "visible" : "hidden";
+  body.style.backgroundColor = isVisibleNewTweet ? "#707070" : "";
   if (isVisibleNewTweet === false) {
     new_tweet_form.reset();
     var p=document.querySelector("#preview");
