@@ -12,8 +12,8 @@
             <span>Nouveau Tweet</span>
         </button>
         <form id="newTweetForm" method="post" enctype="multipart/form-data">
-            <label for="tweet_input">Ecrivez votre message</label>
-            <input id="tweet_input" name="tweet_input" type="text">
+            <label id="tweet_label" for="tweet_input">Ecrivez votre message</label><br>
+            <textarea id="tweet_input" name="tweet_input" type="text"></textarea>
             <div id="depose">Déposez vos images ou cliquez pour choisir</div>
             <input type="file" name="fileToUpload" id="fileToUpload" accept="image/jpeg, image/png, image/gif, image/jpg">
             <div class="bloc" id="preview"></div>
@@ -47,11 +47,11 @@
                 <img id="pen" class="modifyTweetBtn" src="img/Frame 12.png" alt="BIN" >
                 <form id="form_modify" class="modify_tweet" method="post" action="/modify">
                     <button class="modify" type="submit">Valider</button>
-                    <input id="modify_input" type="text" name="modify_tweet" value="<?= $tweet["data"] ?>">
+                    <label id="label_modify" for="modify_input">Ecrivez votre message</label>
+                    <textarea id="modify_input" type="text" name="modify_tweet" value=""><?= $tweet["data"] ?></textarea>
                     <input type="hidden" name="user_id" value="<?= $tweet["user_id"] ?>">
                     <input type="hidden" name="tweet_id" value="<?= $tweet["tweet_id"] ?>">
                 </form>
-
             <?php } ?>
         </div>
     <?php endforeach; ?>
