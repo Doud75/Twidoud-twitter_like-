@@ -7,10 +7,10 @@
         <div class="block1">
             <div class="formInput">
                 <form class="form" action="/login" method="post">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="mail" placeholder="">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="mdp" placeholder="">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="mail" placeholder=""><br>
+                    <label for="password">Mot de passe</label><br>
+                    <input type="password" id="password" name="mdp" placeholder=""><br>
                     <button type="submit" id="valider" name="valider" >Valider</button>
                 </form>
             </div>

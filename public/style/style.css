@@ -36,7 +36,7 @@
     display: grid;
     grid-template-rows: 18px 1fr 30px;
     grid-template-columns: 80px 50px 1fr;
-    gap: 10px
+    gap: 10px;
 }
 .with_image {
     margin: 25px;
@@ -197,17 +197,17 @@ nav {
     color: #00FF87;
 
 }
-.block1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
 
+.formInput {
+    left: calc(50% - 250px/2);
     position: absolute;
-    width: 159px;
-    height: 38px;
-    left: 90px;
     top: 224px;
+    border: 1px solid #00FF87;
+    padding: 40px;
+    border-radius: 20px;
+}
+#email, #password, #pseudo {
+    margin-bottom: 20px;
 }
 #deconnection {
     position: absolute;

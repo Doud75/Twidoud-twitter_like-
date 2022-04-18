@@ -6,12 +6,12 @@
         <div class="block1">
             <div class="formInput">
                 <form method="POST">
-                    <label for="pseudo">Entrez votre pseudo</label>
-                    <input type="text" id="pseudo" name="pseudo">
-                    <label for="email">Entrez votre email</label>
-                    <input type="email" id="email" name="mail">
-                    <label for="password">Entrez votre mot de passe</label>
-                    <input type="password" id="password" name="mdp">
+                    <label for="pseudo">Entrez votre pseudo</label><br>
+                    <input type="text" id="pseudo" name="pseudo"><br>
+                    <label for="email">Entrez votre email</label><br>
+                    <input type="email" id="email" name="mail"><br>
+                    <label for="password">Entrez votre mot de passe</label><br>
+                    <input type="password" id="password" name="mdp"><br>
                     <button type="submit" id="valider" name="valider" >Valider</button>
                 </form>
             </div>
