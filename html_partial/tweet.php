@@ -57,9 +57,7 @@
                 </form>
             <?php } ?>
         </div>
-    <?php endforeach; 
-    $direction = explode("/",$_SERVER["HTTP_REFERER"]);
-    var_dump($direction)?>
+    <?php endforeach; ?>
 </section>
 <script src="script/tweet_script.js?<?php echo time(); ?>"></script>
 <script>
