@@ -12,7 +12,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
                     ":id" => $id
                 ]);
                 http_response_code(302);
-                header('Location: /tweet');
+                $direction = explode("/",$_SERVER["HTTP_REFERER"]);
+                if($direction[3] === "profil") {
+                    header('Location: /profil');
+                } else {
+                    header('Location: /tweet');
+                }
                 exit();
             }
         } else {

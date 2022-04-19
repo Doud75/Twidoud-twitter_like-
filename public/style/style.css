@@ -91,6 +91,10 @@
     grid-row: 1;
     grid-column: 2;
     align-self: center;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 #date {
     grid-row: 1;
@@ -103,6 +107,9 @@
     align-self: center;
     grid-row: 2;
     grid-column: 2 / 4;
+}
+#pen {
+    cursor: pointer;
 }
 #form_modify {
     background-color: #FFF;
@@ -236,6 +243,7 @@ button {
     background-color: #00ff87;
     border:1px solid #cacaca;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .delete, #btn_modify {
@@ -304,6 +312,7 @@ nav {
     width: 40px;
     padding: 0px;
     top: calc(50% - 47px/2 - 1px);
+    cursor: pointer;
 }
 #logout_img {
     background-color: #00FF87;
@@ -361,10 +370,82 @@ nav {
     border: 1px solid #00FF87;
     border-radius: 50%;
     object-fit: cover;
-    height:221px;
-    width: 221px;
-    margin-top: 180px;
+    height:130px;
+    width: 130px;
+    /* margin-top: 180px; */
     margin-left: 90px;
-    /* position: absolute; */
-
+    position: fixed;
+}
+#profil_pseudo {
+    margin-top: 150px;
+    position: fixed;
+    padding: 5px 10px 5px 10px;
+    border:1px solid #00ff87;
+    border-radius: 5px;
+}
+#open_change_profil {
+    position: fixed;
+    margin-top: 210px;
+}
+#change_profil {
+    position: fixed;
+    left: calc(50% - 725px);
+    padding: 30px;
+    margin-left: 500px;
+    position: fixed;
+    border: 1px solid #00FF87;
+    border-radius: 20px;
+    background-color: #fff;
+}
+#pictureToUpload {
+    display: none;
+}
+#depose_profil {
+    height:60px;
+    width: 374px;
+    font-size:20px;
+    line-height: 60px;
+    color:#999;
+    text-align: center;
+    border:2px dashed #00ff87;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#depose_profil.onDropZone {
+    background-color: #00ff87;
+    color:#000;
+    border:1.8px solid #00ff87;
+}
+#preview_profil {
+    display:none;
+}
+#preview_profil {
+    max-height: 90px;
+    max-width: 90px;
+    padding:5px;
+    border:1px solid #00ff87;
+    border-radius: 8px;
+    margin-top: 20px;
+    right: 30px;
+    float: right;
+}
+#valider_picture {
+    margin-top: 20px;
+}
+#open_change_pseudo {
+    position: fixed;
+    margin-top: 255px;
+}
+#change_pseudo {
+    width: 100px;
+    position: fixed;
+    margin-top: 295px;
+    padding:5px;
+    border:1px solid #00ff87;
+    border-radius: 8px;
+}
+#valider_pseudo {
+    position: fixed;
+    margin-top: 335px;
 }

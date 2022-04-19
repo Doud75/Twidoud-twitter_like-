@@ -6,8 +6,8 @@ $title = "Twidoud";
 require "../database/pdo.php";
 $user_id = $_SESSION["user"]["user_id"];
 $maRequete = $pdo->prepare("SELECT * FROM `tweet` ORDER BY `date` DESC");
-$maRequete->execute();
-$tweets = $maRequete->fetchAll(PDO::FETCH_ASSOC);
+    $maRequete->execute();
+    $tweets = $maRequete->fetchAll(PDO::FETCH_ASSOC);
 
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {

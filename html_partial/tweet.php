@@ -29,7 +29,10 @@
         }?>
         <div class="<?= $tweet_class?>" >
             <img id="profil_picture_tweet" src="img_profil/<?=$tweet["profil_picture"]?>" alt="">
-            <span id="name" ><?= $tweet["pseudo"]?></span>
+            <form action="/profil" method="post">
+                <button type="submit" id="name" ><?= $tweet["pseudo"]?></button>
+                <input type="hidden" name="user_id" value="<?= $tweet["user_id"] ?>">
+            </form>
             <span id="date" ><?=$tweet["date"] ?></span>
             <div id="data" ><?=$tweet["data"] ?></div>
             <?php if($tweet["image"]) {?>
@@ -54,7 +57,9 @@
                 </form>
             <?php } ?>
         </div>
-    <?php endforeach; ?>
+    <?php endforeach; 
+    $direction = explode("/",$_SERVER["HTTP_REFERER"]);
+    var_dump($direction)?>
 </section>
 <script src="script/tweet_script.js?<?php echo time(); ?>"></script>
 <script>
