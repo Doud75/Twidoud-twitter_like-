@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
                 ":pseudo" => $pseudo
             ]);
 
-            $maRequete = $pdo->prepare("SELECT `user_id`, `mail`, `mdp`, `pseudo` FROM `user` WHERE `mail` = :mail;");
+            $maRequete = $pdo->prepare("SELECT `user_id`, `mail`, `mdp`, `pseudo`, `profil_picture` FROM `user` WHERE `mail` = :mail;");
             $maRequete->execute([
                 ":mail" => $mail
             ]);

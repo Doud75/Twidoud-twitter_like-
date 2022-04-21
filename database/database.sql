@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS `user` (
         `mail` VARCHAR(255) NOT NULL,
         `mdp` VARCHAR(256) NOT NULL,
         `pseudo` VARCHAR(255),
-        `profil_picture` VARCHAR(255),
+        `profil_picture` VARCHAR(255) DEFAULT "profile-default.jpeg",
         PRIMARY KEY (`user_id`)
     ) ENGINE=InnoDB;
 
@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 CREATE TABLE IF NOT EXISTS `tweet` (
         `tweet_id` INT NOT NULL AUTO_INCREMENT,
         `pseudo` VARCHAR(255),
+        `profil_picture` VARCHAR(255) DEFAULT "profile-default.jpeg",
         `data` TEXT,
         `date` DATETIME DEFAULT CURRENT_TIMESTAMP,
         `image` VARCHAR(255),
