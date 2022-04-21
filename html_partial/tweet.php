@@ -1,5 +1,6 @@
 
 <div id="nav">
+    <!-- Formulaire de deconnection -->
     <form id="deco_form" method="post" action="/deconnection">
         <button class="nav_deco" id="deconnection" type="submit"><img id="logout_img" src="img/logout.png" alt=""></button>
         <input type="hidden" name="deco">
@@ -8,9 +9,11 @@
 </div>
 <section id="section_Tweet">
     <div class="newTweet">
+        <!-- Bouton ouvrir formulaire nouveau tweet -->
         <button class="newTweetBtn" id="open_tweet_window" type="button">
             <span>Nouveau Tweet</span>
         </button>
+        <!-- Formulaire nouveau tweet-->
         <form id="newTweetForm" method="post" enctype="multipart/form-data">
             <label id="tweet_label" for="tweet_input">Ecrivez votre message</label><br>
             <textarea id="tweet_input" name="tweet_input" type="text"></textarea>
@@ -21,14 +24,17 @@
         </form>
     </div>
 
+    <!-- Affiche tous les tweets -->
     <?php foreach($tweets as $tweet): 
         if($tweet["image"]) {
             $tweet_class = "with_image";
         } else {
             $tweet_class = "Tweet";
         }?>
+        <!-- Affiche le contenu du tweet -->
         <div class="<?= $tweet_class?>" >
             <img id="profil_picture_tweet" src="img_profil/<?=$tweet["profil_picture"]?>" alt="">
+            <!-- Formulaire pour rediriger vers la page profil du redacteur du tweet  -->
             <form action="/profil" method="post">
                 <button type="submit" id="name" ><?= $tweet["pseudo"]?></button>
                 <input type="hidden" name="user_id" value="<?= $tweet["user_id"] ?>">
@@ -40,7 +46,7 @@
             <?php } ?>
 
             <?php if($tweet["user_id"] === $_SESSION["user"]["user_id"]) { ?>
-
+                <!-- Formulaire supprimer le tweet si l'utilisateur est le redacteur du tweet -->
                 <form id="delete_tweet" method="post" action="/delete">
                     <button class="delete" type="submit"><img id="dash"src="img/Frame 13.png" alt="BIN" ></button>
                     <input type="hidden" name="delete_id" value="<?= $tweet["tweet_id"] ?>">
@@ -48,6 +54,7 @@
                 </form>
 
                 <img id="pen" class="modifyTweetBtn" src="img/Frame 12.png" alt="BIN" >
+                <!-- Formulaire modifier le tweet si l'utilisateur est le redacteur du tweet -->
                 <form id="form_modify" class="modify_tweet" method="post" action="/modify">
                     <button class="modify" type="submit">Valider</button>
                     <label id="label_modify" for="modify_input">Ecrivez votre message</label>

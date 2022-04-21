@@ -1,4 +1,5 @@
 <div id="nav">
+    <!-- Formulaire de deconnection -->
     <form id="deco_form" method="post" action="/deconnection">
         <button class="nav_deco" id="deconnection" type="submit"><img id="logout_img" src="img/logout.png" alt=""></button>
         <input type="hidden" name="deco">
@@ -7,9 +8,11 @@
 </div>
 
 <div id="profil_picture">
+    <!-- Photo de profil -->
     <img id="img_modify_picture" src="img_profil/<?= $profil_picture?>" alt="">
     <?php if($profil_id === $_SESSION["user"]["user_id"]) { ?>
         <button id="open_change_profil">Modifier photo</button>
+        <!-- Formulaire changement photo de profil si la page est celle de l'utilisateur-->
         <form action="/change_profil" id="change_profil" method="post" enctype="multipart/form-data">
             <div id="depose_profil">Déposez vos images ou cliquez pour choisir</div>
             <input type="file" name="pictureToUpload" id="pictureToUpload" accept="image/jpeg, image/png, image/gif, image/jpg">
@@ -20,9 +23,11 @@
     
 </div>
 <div id="profil_pseudo_div">
+    <!-- Pseudo -->
     <span id="profil_pseudo"><?=$pseudo?></span>
     <?php if($profil_id === $_SESSION["user"]["user_id"]) { ?>
         <button id="open_change_pseudo">Modifier pseudo</button>
+        <!-- Formulaire changement pseudo si la page est celle de l'utilisateur-->
         <form action="/change_pseudo" method="post" id="change_pseudo_form">
             <input type="text" name="change_pseudo" id="change_pseudo" value="<?=$pseudo?>">
             <button type="submit" id="valider_pseudo">Valider</button>
@@ -30,6 +35,7 @@
     <?php } ?>
 </div>
 <section id="section_Tweet">
+    <!-- Affiche les tweets du profil consulté-->
     <?php foreach($tweets as $tweet): 
         if($tweet["image"]) {
             $tweet_class = "with_image";

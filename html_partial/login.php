@@ -6,6 +6,7 @@
         </nav>
         <div class="block1">
             <div class="formInput">
+                <!-- Formulaire de login -->
                 <form class="form" action="/login" method="post">
                     <label for="email">Email</label><br>
                     <input type="email" id="email" name="mail" placeholder=""><br>

@@ -5,6 +5,7 @@
         </button>
         <div class="block1">
             <div class="formInput">
+                <!-- Formulaire d'inscription -->
                 <form method="POST">
                     <label for="pseudo">Entrez votre pseudo</label><br>
                     <input type="text" id="pseudo" name="pseudo"><br>

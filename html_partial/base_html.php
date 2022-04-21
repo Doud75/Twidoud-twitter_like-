@@ -14,6 +14,7 @@
         </nav>
     </header>
     
+    <!-- Affiche $content ici -->
     <?= $content ?>
 
     <footer>
