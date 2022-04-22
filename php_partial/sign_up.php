@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
             ]);
             $user = $maRequete->fetch();
             $_SESSION["user"] = $user;
-            header("Location: /tweet"); //je vais à la page projet
+            header("Location: /tweet");
             exit();
         } else {
             $message = "le pseudo existe déjà";

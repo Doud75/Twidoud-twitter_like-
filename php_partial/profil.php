@@ -29,6 +29,14 @@ $maRequete = $pdo->prepare("SELECT * FROM `tweet` WHERE `user_id` = :userId ORDE
     ]);
     $tweets = $maRequete->fetchAll(PDO::FETCH_ASSOC);
 
+$user_id = $_SESSION["user"]["user_id"];
+$maRequete = $pdo->prepare("SELECT * FROM `likes` WHERE `user_id` = :userId");
+    $maRequete->execute([
+        ":userId" => $user_id
+    ]);
+    $user_likes = $maRequete->fetchAll(PDO::FETCH_ASSOC);
+    $tweet_like_src = "img/unlike.png";
+
 
 require_once __DIR__ . "/../html_partial/profil.php"; 
 

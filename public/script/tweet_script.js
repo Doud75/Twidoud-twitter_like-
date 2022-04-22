@@ -1,3 +1,4 @@
+
 var body = document.querySelector("body");
 var new_tweet_form = document.querySelector("#newTweetForm");
 var new_tweet_btn = document.querySelector(".newTweetBtn");
@@ -77,8 +78,3 @@ function openVignette() {
 };
 
 new_tweet_btn.addEventListener("click", open_tweet_input);
-
-
-
-
-

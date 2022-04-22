@@ -9,6 +9,12 @@ $maRequete = $pdo->prepare("SELECT * FROM `tweet` ORDER BY `date` DESC");
     $maRequete->execute();
     $tweets = $maRequete->fetchAll(PDO::FETCH_ASSOC);
 
+$maRequete = $pdo->prepare("SELECT * FROM `likes` WHERE `user_id` = :userId");
+    $maRequete->execute([
+        ":userId" => $user_id
+    ]);
+    $user_likes = $maRequete->fetchAll(PDO::FETCH_ASSOC);
+    $tweet_like_src = "img/unlike.png";
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
     if(isset($_POST["tweet_input"])) {

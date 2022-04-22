@@ -30,7 +30,7 @@
     border-radius: 20px;
     display: grid;
     grid-template-rows: 18px 1fr 30px;
-    grid-template-columns: 80px 50px 1fr;
+    grid-template-columns: 80px 50px 50px 1fr;
     gap: 10px;
 }
 .with_image {
@@ -44,7 +44,7 @@
     border-radius: 20px;
     display: grid;
     grid-template-rows: 18px 1fr 200px 30px;
-    grid-template-columns: 80px 50px 1fr;
+    grid-template-columns: 80px 50px 50px 1fr;
     gap: 10px
 }
 
@@ -60,7 +60,7 @@
 }
 #image_tweet {
     grid-row: 3;
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     height: 200px;
     /* border:1px solid #cacaca; */
     border-radius: 10px;
@@ -68,26 +68,40 @@
     left: 141px;
     top: 149px;
 }
-.with_image #delete_tweet {
+#like_img {
+    height: 30px;
+    width: 30px;
+}
+.with_image #tweet_like {
     grid-row: 4;
     grid-column: 2;
+    cursor: pointer;
+}
+.with_image #delete_tweet {
+    grid-row: 4;
+    grid-column: 3;
 }
 .with_image .modifyTweetBtn {
     grid-row: 4;
-    grid-column: 3;
+    grid-column: 4;
+}
+.Tweet #tweet_like {
+    grid-row: 3;
+    grid-column: 2;
+    cursor: pointer;
 }
 .Tweet #delete_tweet {
     grid-row: 3;
-    grid-column: 2;
+    grid-column: 3;
 }
 .Tweet .modifyTweetBtn {
     grid-row: 3;
-    grid-column: 3;
+    grid-column: 4;
 }
 #name {
     font-weight: bold;
     grid-row: 1;
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     line-height: 1px;
     border: none;
     text-align: left;
@@ -99,7 +113,7 @@
 }
 #date {
     grid-row: 1;
-    grid-column: 3;
+    grid-column: 4;
     align-self: center;
     justify-self: end;
 }
@@ -107,7 +121,7 @@
 #data {
     align-self: center;
     grid-row: 2;
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
 }
 #pen {
     cursor: pointer;
@@ -247,7 +261,7 @@ button {
     cursor: pointer;
 }
 
-.delete, #btn_modify {
+.delete, #btn_modify, #like {
     background-color: #fff;
     border:0px;
     border-radius: 5px;
@@ -376,6 +390,7 @@ nav {
     /* margin-top: 180px; */
     margin-left: 90px;
     position: fixed;
+    top: 224px
 }
 #profil_pseudo {
     margin-top: 150px;
@@ -383,10 +398,12 @@ nav {
     padding: 5px 10px 5px 10px;
     border:1px solid #00ff87;
     border-radius: 5px;
+    top: 224px;
 }
 #open_change_profil {
     position: fixed;
     margin-top: 210px;
+    top: 224px;
 }
 #change_profil {
     position: fixed;
@@ -397,6 +414,7 @@ nav {
     border: 1px solid #00FF87;
     border-radius: 20px;
     background-color: #fff;
+    top: 224px;
 }
 #pictureToUpload {
     display: none;
@@ -437,6 +455,7 @@ nav {
 #open_change_pseudo {
     position: fixed;
     margin-top: 255px;
+    top: 224px;
 }
 #change_pseudo {
     width: 100px;
@@ -445,8 +464,10 @@ nav {
     padding:5px;
     border:1px solid #00ff87;
     border-radius: 8px;
+    top: 224px;
 }
 #valider_pseudo {
     position: fixed;
     margin-top: 335px;
+    top: 224px;
 }

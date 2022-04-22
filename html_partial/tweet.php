@@ -30,7 +30,14 @@
             $tweet_class = "with_image";
         } else {
             $tweet_class = "Tweet";
-        }?>
+        }
+        foreach($user_likes as $user_like) {
+            if($user_like["tweet_id"] === $tweet["tweet_id"]) {
+                $tweet_like_src = "img/like.png";
+            } else {
+                $tweet_like_src = "img/unlike.png";
+            }
+        } ?>
         <!-- Affiche le contenu du tweet -->
         <div class="<?= $tweet_class?>" >
             <img id="profil_picture_tweet" src="img_profil/<?=$tweet["profil_picture"]?>" alt="">
@@ -44,6 +51,10 @@
             <?php if($tweet["image"]) {?>
             <img src="imgs/<?=$tweet["image"]?>" id="image_tweet" >
             <?php } ?>
+            <form action="/likeTweet" method="post" id="tweet_like">
+                <button id="like" type="submit"><img id="like_img"src="<?= $tweet_like_src ?>" alt="like"><?=$tweet["like"]?></button>
+                <input type="hidden" name="like_tweet_id" value="<?= $tweet["tweet_id"] ?>">
+            </form>
 
             <?php if($tweet["user_id"] === $_SESSION["user"]["user_id"]) { ?>
                 <!-- Formulaire supprimer le tweet si l'utilisateur est le redacteur du tweet -->

@@ -20,7 +20,18 @@ CREATE TABLE IF NOT EXISTS `tweet` (
         `data` TEXT,
         `date` DATETIME DEFAULT CURRENT_TIMESTAMP,
         `image` VARCHAR(255),
+        `like` BIGINT(20),
         `user_id` INT NOT NULL,
         PRIMARY KEY (`tweet_id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
+        FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`) ON DELETE CASCADE
+    ) ENGINE=InnoDB;
+
+
+CREATE TABLE IF NOT EXISTS `likes` (
+        `like_id` INT NOT NULL AUTO_INCREMENT,
+        `tweet_id` INT NOT NULL,
+        `user_id` INT NOT NULL,
+        PRIMARY KEY (`like_id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`) ON DELETE CASCADE,
+        FOREIGN KEY (`tweet_id`) REFERENCES `tweet`(`tweet_id`) ON DELETE CASCADE
     ) ENGINE=InnoDB;

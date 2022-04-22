@@ -57,6 +57,9 @@ switch ($uri) {
     case "/change_pseudo":
         require_once __DIR__ . "/php_partial/change_pseudo.php";
         break;
+    case "/likeTweet":
+        require_once __DIR__ . "/php_partial/likeTweet.php";
+        break;
     default:
         http_response_code(404);
         $content = file_get_contents(__DIR__ . "/html_partial/alert/404.php");
