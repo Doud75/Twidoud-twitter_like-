@@ -53,14 +53,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $uploadOk = 0;
     }
 
-    // Check if $uploadOk is set to 0 by an error
+    // si $uploadOk === 0 alors il y a une erreur quelque part
     if ($uploadOk === 0) {
         $message = "Une erreur est survenue";
         http_response_code(403);
         require_once __DIR__ . "/../html_partial/alert/baniere.php";
-    } else {
+    } else { // sinon
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             $maRequete = $pdo->prepare(
+                // j'ajoute les valeurs au tweet avec l'image
                 "INSERT INTO `tweet` (`pseudo`, `user_id`, `data`, `image`, `profil_picture`)
                 VALUES(:pseudo, :userId, :oneData, :image, :profil_picture)");
                 $maRequete->execute([
@@ -70,6 +71,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
                     ":image" => $full_name,
                     ":profil_picture" => $profil_picture
                 ]);
+            // je reviens à la page tweet
             header("Location: /tweet");
             exit();
         } else {

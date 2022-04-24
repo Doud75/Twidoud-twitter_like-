@@ -4,16 +4,20 @@ ob_start();
 //valeur pour la balisehtml <title>
 $title = "profil";
 
+// si je suis en Post
 if($_SERVER["REQUEST_METHOD"] === "POST") {
     if(isset($_POST["user_id"])) {
         require_once "../database/pdo.php";
+        // je récupère le user_id à afficher dans la page profil
         $profil_id = filter_input(INPUT_POST, "user_id");
     }
 } else {
+    // sinon j'affiche le profil de l'utilisateur
     require_once "../database/pdo.php";
     $profil_id = $_SESSION["user"]["user_id"];
 }
 
+// je récupère les informations du profil
 $maRequete = $pdo->prepare("SELECT * FROM `user` WHERE `user_id` = :userId");
     $maRequete->execute([
         ":userId" => $profil_id
@@ -23,12 +27,14 @@ $maRequete = $pdo->prepare("SELECT * FROM `user` WHERE `user_id` = :userId");
     $pseudo = $profil["pseudo"];
     $profil_picture = $profil["profil_picture"];
 
+// je récupère les tweets du profil
 $maRequete = $pdo->prepare("SELECT * FROM `tweet` WHERE `user_id` = :userId ORDER BY `date` DESC");
     $maRequete->execute([
         ":userId" => $profil_id
     ]);
     $tweets = $maRequete->fetchAll(PDO::FETCH_ASSOC);
 
+// je récupère les likes de l'utilisateur pour les afficher
 $user_id = $_SESSION["user"]["user_id"];
 $maRequete = $pdo->prepare("SELECT * FROM `likes` WHERE `user_id` = :userId");
     $maRequete->execute([

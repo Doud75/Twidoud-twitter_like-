@@ -27,7 +27,7 @@ if ("POST" === $_SERVER["REQUEST_METHOD"]) {
         require_once __DIR__ . "/../html_partial/alert/baniere.php";
     } else { //sinon j'ajoute le resultat de la requete dans la session
         $_SESSION["user"] = $user;
-        header("Location: /tweet"); //je vais à la page projet
+        header("Location: /tweet"); //je vais à la page tweet
         exit();
     }
 }

@@ -10,7 +10,7 @@ if ($uri == "/entrer.php") {
         //je vais à login
         header("Location: /login");
         exit;
-    } else { //sinon je vais à projet
+    } else { //sinon je vais à tweet
         header("Location: /tweet");
         exit;
     }
@@ -25,7 +25,7 @@ if ($uri == "/entrer.php") {
 }
 
 
-//si $uri
+//si $uri = ...
 switch ($uri) {
     case "/login":
         require_once __DIR__ . "/php_partial/login.php";

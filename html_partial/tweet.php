@@ -31,6 +31,7 @@
         } else {
             $tweet_class = "Tweet";
         }
+        // Affiche les likes de l'utilisateur
         foreach($user_likes as $user_like) {
             if($user_like["tweet_id"] === $tweet["tweet_id"]) {
                 $tweet_like_src = "img/like.png";

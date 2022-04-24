@@ -9,10 +9,12 @@ var deconnection = document.querySelector("#deco_form");
 var profilBtn = document.querySelector("#profil_btn");
 var nav = document.querySelector("#nav");
 
+// j'ajoute des boutons à la nav bar
 nav.appendChild(deconnection);
 nav.appendChild(profilBtn);
 
 
+// je récupère tous les boutons modifier pour pouvoir ouvrir les formulaire que je veux
 let modify_tweet_btn = document.querySelectorAll("#pen");
 modify_tweet_btn.forEach(button => {
   let isVisible = false
@@ -26,6 +28,7 @@ modify_tweet_btn.forEach(button => {
   })
 })
 
+// permet d'ouvrir le formulaire nouveau tweet ou de le vider si on le ferme
 let isVisibleNewTweet = false;
 function open_tweet_input() {
   isVisibleNewTweet = !isVisibleNewTweet
@@ -40,6 +43,7 @@ function open_tweet_input() {
   }
 }
 
+// drag n drop
 depose.addEventListener("click", function(evt) {
   evt.preventDefault();
   new_image_input.click();
@@ -62,6 +66,7 @@ depose.addEventListener("drop", function(evt) {
   openVignette()
 });
 
+// affiche la mignature de l'image upload
 function openVignette() {
   var p=document.querySelector("#preview");
   p.innerHTML="";
