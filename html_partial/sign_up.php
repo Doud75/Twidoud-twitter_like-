@@ -13,7 +13,7 @@
                     <input type="email" id="email" name="mail"><br>
                     <label for="password">Entrez votre mot de passe</label><br>
                     <input type="password" id="password" name="mdp"><br>
-                    <button type="submit" id="valider" name="valider" >Valider</button>
+                    <button type="submit" id="validers" name="valider" >Valider</button>
                 </form>
             </div>
         </div>
