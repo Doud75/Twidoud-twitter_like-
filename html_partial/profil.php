@@ -47,6 +47,7 @@
         foreach($user_likes as $user_like) {
             if($user_like["tweet_id"] === $tweet["tweet_id"]) {
                 $tweet_like_src = "img/like.png";
+                break;
             } else {
                 $tweet_like_src = "img/unlike.png";
             }

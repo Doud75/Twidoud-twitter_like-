@@ -44,6 +44,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         // On redirige vers la page precedente
         http_response_code(302);
                 $direction = explode("/",$_SERVER["HTTP_REFERER"]);
+                // var_dump($direction);
                 if($direction[3] === "profil") {
                     header('Location: /profil');
                 } else {
