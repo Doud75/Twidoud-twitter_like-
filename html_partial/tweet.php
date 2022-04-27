@@ -5,7 +5,10 @@
         <button class="nav_deco" id="deconnection" type="submit"><img id="logout_img" src="img/logout.png" alt=""></button>
         <input type="hidden" name="deco">
     </form>
-    <button id="profil_btn"><a href="/profil"><img id="profil_img" src="img/profile.png" alt=""></a></button>
+    <form id="profil_form" action="/profil" method="post">
+        <button type="submit" id="profil_btn" ><img id="profil_img" src="img/profile.png" alt=""></button>
+        <input type="hidden" name="user_id" value="<?= $_SESSION["user"]["user_id"] ?>">
+    </form>
 </div>
 <section id="section_Tweet">
     <div class="newTweet">

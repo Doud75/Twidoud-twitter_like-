@@ -1,5 +1,5 @@
 var deconnection = document.querySelector("#deco_form");
-var profilBtn = document.querySelector("#profil_btn");
+var profilBtn = document.querySelector("#profil_form");
 var nav = document.querySelector("#nav");
 var body = document.querySelector("body");
 var pseudo_positions = document.querySelector("#profil_pseudo");

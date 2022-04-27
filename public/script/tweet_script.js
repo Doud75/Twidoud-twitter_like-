@@ -6,7 +6,7 @@ var new_tweet_input = document.querySelector("#tweet_input");
 var new_image_input = document.querySelector("#fileToUpload");
 var depose = document.querySelector("#depose");
 var deconnection = document.querySelector("#deco_form");
-var profilBtn = document.querySelector("#profil_btn");
+var profilBtn = document.querySelector("#profil_form");
 var nav = document.querySelector("#nav");
 
 // j'ajoute des boutons à la nav bar
