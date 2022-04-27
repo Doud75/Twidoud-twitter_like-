@@ -13,8 +13,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["profil_watching"] = $profil_id;
     }
 } else {
-    $direction = explode("/",$_SERVER["HTTP_REFERER"]);
-    var_dump($direction);
     // sinon j'affiche le profil de l'utilisateur
     require_once "../database/pdo.php";
     $profil_id = $_SESSION["profil_watching"];
