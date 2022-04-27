@@ -1,4 +1,8 @@
 
+position = localStorage.getItem("scroll");
+window.scrollTo(0, position)
+localStorage.setItem("scroll", 0);
+
 var body = document.querySelector("body");
 var new_tweet_form = document.querySelector("#newTweetForm");
 var new_tweet_btn = document.querySelector(".newTweetBtn");
@@ -25,6 +29,22 @@ modify_tweet_btn.forEach(button => {
     isVisible = !isVisible
     toDisplay.style.visibility = isVisible ? "visible" : "hidden";
     body.style.backgroundColor = isVisible ? "#707070" : "";
+  })
+})
+
+let like_btn = document.querySelectorAll("#like");
+like_btn.forEach(button => {
+  button.addEventListener("click", e => {
+    position = window.scrollY;
+    localStorage.setItem("scroll", position);
+  })
+})
+
+let delete_btn = document.querySelectorAll(".delete");
+delete_btn.forEach(button => {
+  button.addEventListener("click", e => {
+    position = window.scrollY;
+    localStorage.setItem("scroll", position);
   })
 })
 
