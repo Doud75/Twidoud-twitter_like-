@@ -1,7 +1,14 @@
+.alert {
+    left: calc(50% - 170px/2);
+    position: absolute;
+    top: 150px;
+    border: 1px solid #FF6464;
+    padding: 10px;
+    border-radius: 10px;
+}
 .modify_tweet {
     visibility: hidden;
 }
-
 #section_Tweet{
     margin-top: 220px;
     display: grid;
