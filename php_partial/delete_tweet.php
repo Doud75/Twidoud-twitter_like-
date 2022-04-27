@@ -19,9 +19,9 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
                 $direction = explode("/",$_SERVER["HTTP_REFERER"]);
                 // je redirige vers la page precedente
                 if($direction[3] === "profil") {
-                    header('Location: /profil');
+                    header("Location: /profil");
                 } else {
-                    header('Location: /tweet');
+                    header("Location: /tweet");
                 }
                 exit();
             }

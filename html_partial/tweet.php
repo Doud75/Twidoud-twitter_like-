@@ -45,6 +45,7 @@
         } ?>
         <!-- Affiche le contenu du tweet -->
         <div class="<?= $tweet_class?>" >
+            <a id="<?= $tweet["tweet_id"]?>"></a>
             <img id="profil_picture_tweet" src="img_profil/<?=$tweet["profil_picture"]?>" alt="">
             <!-- Formulaire pour rediriger vers la page profil du redacteur du tweet  -->
             <form action="/profil" method="post">

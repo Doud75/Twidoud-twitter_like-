@@ -45,12 +45,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         http_response_code(302);
                 $direction = explode("/",$_SERVER["HTTP_REFERER"]);
                 if($direction[3] === "profil") {
-                    header('Location: /profil');
+                    header("Location: /profil#$tweet_id");
                 } else {
-                    header('Location: /tweet');
+                    header("Location: /tweet#$tweet_id");
                 }
                 exit();
-        
     }
 }
 ?>
